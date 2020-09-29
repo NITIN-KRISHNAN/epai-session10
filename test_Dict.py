@@ -74,11 +74,11 @@ def test_mandatory_fuctions_availability():
 
 def test_dict_avg_age():
     profile_dict = {"0":{"birthdate":datetime.date(1980, 1, 1)}, "1":{"birthdate":datetime.date(2000, 1, 1)}}
-    assert Dict.calculate_avg_age(profile_dict)[0] == 30.747433264887064
+    assert round(Dict.calculate_avg_age(profile_dict)[0],2) == round(30.747433264887064,2)
 
 def test_dict_oldest_age():
     profile_dict = {"0":{"birthdate":datetime.date(1980, 1, 1)}, "1":{"birthdate":datetime.date(2000, 1, 1)}}
-    assert Dict.calculate_oldest_person_age(profile_dict)[0] == 40.747433264887064
+    assert round(Dict.calculate_oldest_person_age(profile_dict)[0],2) == round(40.747433264887064,2)
 
 def test_dict_mean_current_location():
     profile_dict = {"0":{"current_location":(Decimal(20),Decimal(300))}, "1":{"current_location":(Decimal(100),Decimal(400))}}

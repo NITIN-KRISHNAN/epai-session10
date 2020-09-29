@@ -22,5 +22,5 @@ def test_index_calculation():
     stock_market = StockMarketExt(*(Stock.StockExt('Rodriguez','Rod2' , 1372,1418,  1248, 1257, 0.36),
                                        Stock.StockExt('Freeman', 'Fre41', 7391, 8694, 7213, 7293, 0.64)))
     index = Stock.calculate_index(stock_market)
-    assert index.high == (1418*.36 + 8694*.64) and index.open == (1372*.36 + 7391*.64) and index.low == (1248*.36 + 7213*.64) and index.close == (1257*.36 + 7293*.64)
+    assert round(index.high,2) == round((1418*.36 + 8694*.64),2) and round(index.open,2) == round((1372*.36 + 7391*.64),2) and round(index.low,2) == round((1248*.36 + 7213*.64),2) and round(index.close,2) == round((1257*.36 + 7293*.64),2)
 
