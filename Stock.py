@@ -5,11 +5,14 @@ import random
 NUM_COMPANIES = 100
 Stock = namedtuple("Stock", "name, symbol, open, high, close")
 StockExt = namedtuple("StockExt", Stock._fields + ("weight"))
+StockMarket = namedtuple("StockMarket", list(range(NUM_COMPANIES)), rename=True)
+
 
 def create_stock_market():
     weights = get_random_weights(NUM_COMPANIES)
     for weight in weights:
         pass
+
 
 def get_random_weights(num):
     random_list = [random.random() for i in range(num)]
